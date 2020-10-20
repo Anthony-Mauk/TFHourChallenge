@@ -12,10 +12,10 @@ namespace _24HourChallenge.Data
     public class Reply : Comment
     {
         [Key]
-        public int ReplyID { get; set; }
-        [Required]
-        public string ReplyComment { get; set; }
-        //[ForeignKey(nameof(Comment))]
-        //public virtual Comment Comment { get; set; }
+        public int ReplyId { get; set; }
+
+        [ForeignKey(nameof(Comment))]
+        public int ReplyCommentId { get; set; }
+        public virtual Comment Comment { get; set; }
     }
 }

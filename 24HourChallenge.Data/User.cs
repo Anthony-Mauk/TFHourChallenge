@@ -15,5 +15,8 @@ namespace _24HourChallenge.Data
         public string Name { get; set; }
         [Required]
         public string Email { get; set; }
+        public virtual ICollection<Post> Posts { get; set; } = new List<Post>();
+        public virtual ICollection<Like> LikedPosts { get; set; } = new List<Like>();
+        public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
     }
 }

@@ -18,9 +18,11 @@ namespace _24HourChallenge.Data
         public string Title { get; set; }
         [Required]
         public string Text { get; set; }
-        //[Required]
-        [ForeignKey(nameof(Id))]
+        [Required]
+        //[ForeignKey(nameof(Id))]
         public User Author{ get; set; }
+        //[ForeignKey(nameof(Author))]
+        //public virtual User User { get; set; }
         //public virtual User User { get; set; }
 
     }
